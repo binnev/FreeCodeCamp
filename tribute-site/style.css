@@ -6,6 +6,14 @@ img {
   max-width: 100%;
 }
 
+h1 {
+	font-family: "Faster One", cursive;
+}
+
+body {
+	font-family: "Poiret One", monospace;
+}
+
 #img-div {
   display: flex;
   flex-direction: column;
