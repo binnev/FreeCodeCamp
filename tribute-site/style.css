@@ -1,6 +1,6 @@
-* {
+/** {
   border: 1px solid red;
-}
+}*/
 
 img {
   max-width: 100%;
@@ -12,6 +12,7 @@ h1 {
 
 body {
 	font-family: "Poiret One", monospace;
+  font-size: x-large;
 }
 
 #img-div {
