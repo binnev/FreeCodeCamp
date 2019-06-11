@@ -4,6 +4,7 @@
 
 :root {
   --content-width: 550px;
+  --dark-brown: #472000;
 }
 
 main {
@@ -15,6 +16,7 @@ main {
 
 h1, h2, h3, h4, h5 {
 	font-family: "permanent marker", cursive;
+  color: var(--dark-brown);
 }
 
 body {
@@ -45,7 +47,7 @@ header, footer {
 
 .nav-bar-container {
   width: 100%;
-  background-color: saddlebrown;
+  background-color: var(--dark-brown);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -58,9 +60,9 @@ header, footer {
   justify-content: space-around;
 }
 
-.nav-bar a {
-  color: goldenrod;
-}
+header a {color: goldenrod;}
+
+footer a {color: var(--dark-brown);}
 
 .content {
   max-width: var(--content-width);
@@ -84,7 +86,7 @@ header, footer {
   font-family: "Sedgwick ave";
 }
 
-.subtitle {
+#subtitle {
   /*font-family: "Poiret One", monospace;*/
   /*font-family: "Berkshire Swash";*/
   /*font-family: "Covered By Your Grace", cursive;*/
@@ -98,4 +100,5 @@ header, footer {
   position: relative;
   bottom: 30px;
   font-size: xx-large;
+  color: var(--dark-brown);
 }
