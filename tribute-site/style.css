@@ -1,12 +1,14 @@
-/** {
+* {
   border: 1px solid red;
-}*/
-
-img {
-  max-width: 100%;
 }
 
-h1 {
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2, h3, h4, h5 {
 	font-family: "permanent marker", cursive;
 }
 
@@ -24,25 +26,22 @@ body {
   font-size: x-large;
   /*background: url(https://i.imgur.com/MJAkxbh.png);*/
   background: url(http://www.anasfim.com/p/2018/04/wrinkled-notebook-paper-background-3-background-check-all-inside-wrinkled-notebook-paper-background.jpg);
+  max-width: 600px;
 }
 
-#img-div {
+.figure {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
 }
 
-#img-caption {
+/*figure images*/
+.figure img {
+  max-width: 100%;
+}
+
+/*figure captions*/
+.figure p {
   font-family: "Sedgwick ave";
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#tribute-info {
-  max-width: 500px;
 }
