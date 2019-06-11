@@ -1,7 +1,11 @@
-* {
+/** {
   border: 1px solid red;
-}
+}*/
 
+:root {
+  --content-width: 550px;
+  --dark-brown: #472000;
+}
 
 main {
   display: flex;
@@ -12,6 +16,7 @@ main {
 
 h1, h2, h3, h4, h5 {
 	font-family: "permanent marker", cursive;
+  color: var(--dark-brown);
 }
 
 body {
@@ -31,10 +36,6 @@ body {
   background-position: center;
 }
 
-.content {
-  max-width: 500px;
-}
-
 header, footer {
   background-color: goldenrod;
   width: 100%;
@@ -44,11 +45,35 @@ header, footer {
   align-items: center;
 }
 
+.nav-bar-container {
+  width: 100%;
+  background-color: var(--dark-brown);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav-bar {
+  width: var(--content-width);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+header a {color: goldenrod;}
+
+footer a {color: var(--dark-brown);}
+
+.content {
+  max-width: var(--content-width);
+}
+
 .figure {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px;
 }
 
 /*figure images*/
@@ -59,4 +84,21 @@ header, footer {
 /*figure captions*/
 .figure p {
   font-family: "Sedgwick ave";
+}
+
+#subtitle {
+  /*font-family: "Poiret One", monospace;*/
+  /*font-family: "Berkshire Swash";*/
+  /*font-family: "Covered By Your Grace", cursive;*/
+  /*font-family: "Patrick Hand SC";*/
+  /*font-family: "Permanent Marker";*/
+  /*font-family: "Sedgwick Ave";*/
+  /*font-family: "Walter Turncoat";*/
+  font-family: "Yesteryear";
+  /*font-family: "Faster One";*/
+  /*font-family: "Poiret One";*/
+  position: relative;
+  bottom: 30px;
+  font-size: xx-large;
+  color: var(--dark-brown);
 }
