@@ -7,12 +7,23 @@ img {
 }
 
 h1 {
-	font-family: "Faster One", cursive;
+	font-family: "permanent marker", cursive;
 }
 
 body {
-	font-family: "Poiret One", monospace;
+	/*font-family: "Poiret One", monospace;*/
+  /*font-family: "Berkshire Swash";*/
+  font-family: "Covered By Your Grace", cursive;
+  /*font-family: "Patrick Hand SC";*/
+  /*font-family: "Permanent Marker";*/
+  /*font-family: "Sedgwick Ave";*/
+  /*font-family: "Walter Turncoat";*/
+  /*font-family: "Yesteryear";*/
+  /*font-family: "Faster One";*/
+  /*font-family: "Poiret One";*/
   font-size: x-large;
+  /*background: url(https://i.imgur.com/MJAkxbh.png);*/
+  background: url(background-notebook-paper.jpg);
 }
 
 #img-div {
@@ -20,6 +31,10 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+}
+
+#img-caption {
+  font-family: "Sedgwick ave";
 }
 
 main {
