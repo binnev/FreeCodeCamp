@@ -1,0 +1,197 @@
+/* * {
+  border: 1px solid black;
+  opacity: .93;
+} */
+
+:root {
+/*   colour scheme pinched from https://visme.co/blog/website-color-schemes/ */
+  --dark: #2C3531;
+  --accent1: #116466;
+  --medium: #D9B08C;
+  --accent2: #FFCB9A;
+  --light: #D1E8E2;
+  --header-height: 180px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "raleway";
+  min-width: 420px;
+}
+
+header {
+  background-color: white;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  min-width: 420px;
+/*   height: var(--header-height); */
+/*   border: 1px solid red; */
+}
+
+footer {
+  background-color: var(--medium);
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 10px;
+/*   margin: 10px; */
+}
+
+footer * {
+  width: 90%;
+  margin: auto;
+}
+
+form {
+/*   height: 100px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--accent2);
+  padding: 5px;
+/*   margin: 10px; */
+}
+
+form * {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+form input[type="email"]{
+  padding: 5px;
+  border: 2px solid var(--dark);
+  border-radius: 3px;
+}
+
+form button{
+  background-color: white;
+  padding: 5px; 
+/*   border: 2px solid var(--medium); */
+  border: none;
+  border-radius: 3px;
+}
+
+#header-img {
+  transform: rotate(90deg);
+  height: 110px;
+}
+
+.logo-container {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+  min-width: 620px;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+/*   width: 100%; */
+/*   left: 0; */
+/*   right: 0; */
+/*   border: 5px solid green; */
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: var(--medium);
+  border-top: 5px solid var(--accent1);
+  font-family: "permanent marker", sans-serif;
+}
+
+/* Fix internal link offset due to fixed header as per this question: https://stackoverflow.com/questions/4086107/fixed-page-header-overlaps-in-page-anchors */
+.nav-link {
+  color: var(--dark);
+}
+
+.content {
+  min-width: 300px;
+  max-width: 700px;
+  text-align: justify;
+  margin: auto;
+/*   margin-top: 200px; */
+  margin-top: var(--header-height);
+  padding: 10px;
+  padding-bottom: 100px;
+  background-color: var(--light);
+}
+
+.content iframe {
+  width: 100%;
+  height: 300px
+}
+
+#title {
+  font-family: "Patua one", serif;
+  font-size: 60pt;
+  font-weight: normal;
+  padding: 0px 10px 0px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: -5px;
+  color: white;
+  background-color: var(--dark);
+}
+
+h1, h2, h3 {
+  font-family: "merriweather", serif;
+  color: var(--dark)
+}
+
+h2 {
+  background-color: var(--accent1);
+  color: white;
+  padding: 3px;
+}
+
+#filler, .gallery {
+  background-color: white;
+  border: 3px solid var(--medium);
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.gallery-img {
+  max-height: 150px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+#filler div {
+  width: 100px;
+  height: 100px;
+  border: 3px solid black;
+  border-radius: 3px;
+  font-size: x-large;
+  margin: 5px;
+}
+
+#filler1 {background-color: var(--dark)}
+#filler2 {background-color: var(--accent1)}
+#filler3 {background-color: var(--medium)}
+#filler4 {background-color: var(--accent2)}
+#filler5 {background-color: var(--light)}
+
+/* mobile */
+@media (max-width: 620px) {
+  #title {font-size: 40pt;}
+  #header-img {height: 75px;}  
+  .nav-bar {flex-direction: column;}  
+  .content {margin-top: 220px;}
+  .logo-container{min-width: 420px;}
+}
