@@ -1,6 +1,6 @@
- * {
+/*  * {
   border: 1px solid red;
-} 
+}  */
 
 :root {
   /* colours */
@@ -9,26 +9,28 @@
   --dark: #005824;
 }
 
-html {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-}
-
 header {
-  width = 100%;
-/*   background-color: teal; */
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
   text-align: center;
   color: var(--dark);
 }
 
+h1 {
+  font-family: "lobster";
+  font-size: 40pt;
+  font-weight: normal;
+  margin: 10px;
+}
+
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 400px; 
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   align-items: center; */
+/*   min-width: 400px;  */
   background-color: var(--med);
+  font-family: "raleway", sans-serif;
 }
 
 footer {
@@ -38,68 +40,69 @@ footer {
   text-align: center;
 }
 
-fieldset {
+.survey-form {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, auto);
+  grid-gap: 20px;
+  background-color: var(--light);
+  max-width: 500px;
+  padding: 20px;
   border-radius: 5px;
-  border: 2px solid var(--dark);
+  margin: auto;  
 }
 
-.survey-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: stretch;
-  background-color: var(--light);
-  max-width: 600px;
-  padding: 5px;
-  border-radius: 5px;
+fieldset {
+  border: 0;
+  border-top: 6px solid var(--dark);
+  padding: 20px;
+}
+
+fieldset legend {
+  text-align: left;
+/*   font-weight: bold; */
+  padding: 0 10px 0 10px;
+  font-family: "merriweather", serif;
+/*   font-size: large; */
 }
 
 .fieldset-column {
-  display: flex; 
-  flex-direction: column;
-  justify-content: stretch;
+  width: 100%;
+  display: grid; 
+  grid-gap: 5px 10px;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(4, auto);
+  justify-items: right;
   align-items: center;
 }
 
-.fieldset-column label {
-  display: flex;
-  flex-direction: row;
-  justify-content: stretch;
-}
-
-#personal-details input {
-	width: 300px;
+.fieldset-column input, .fieldset-column select{
+	width: 100%;
+  max-width: 250px;
+  justify-self: left;
+  height: 25px;
+  border-radius: 3px;
+  border: 2px solid #ddd;
+  padding-left: 5px;
 }
 
 .multiple-radio {
-  max-width: 55%;
-  display: flex;
-  flex-direction: column; 
-  align-items: right;
-}
-
-.multiple-radio label {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 10px 10px;
   align-items: center;
-  text-align: right;
 }
 
 .multiple-checkbox {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 5px 5px;
+  justify-items: right;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr) minmax(30px, 1fr));
 }
 
-.multiple-checkbox label {
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-  padding: 3px;
-/*   border: 1px solid var(--med); */
-  background-color: var(--med);
+.multiple-checkbox input {
+  justify-self: left;
 }
 
 .comments {
@@ -115,4 +118,21 @@ fieldset {
 
 .comments label textarea {
   min-height: 100px;
+  border-radius: 3px;
 }
+
+button[type="submit"] {
+  color: red;
+  height: 30px;
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
+  color: var(--light);
+  font-weight: bold;
+  font-size: large;
+  background-color: var(--dark);
+  border: 0;
+  border-radius: 5px;
+}
+
+/* use a media query to adapt the fieldset-column */

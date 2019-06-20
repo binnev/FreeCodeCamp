@@ -3,51 +3,60 @@
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway|Berkshire+Swash|Covered+By+Your+Grace|Patrick+Hand+SC|Permanent+Marker|Sedgwick+Ave|Walter+Turncoat|Yesteryear|Merriweather|Poiret+One&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="main.css">
   </head>
 
   <header>
-    <h1 id="title">Title of the form</h1>
+    <h1 id="title">Survey</h1>
     <p id="description">This is a survey to gauge your response to my previous site about Norman Borlaug. It will take a few minutes to complete.</p>
   </header>
   
   <body>
     <form id="survey-form" class="survey-form">
-      <fieldset class="fieldset-column" id="personal-details">
+      <fieldset id="personal-details">
         <legend>Enter your personal details:</legend>
-        <label for="name" id="name-label">Name:</label>
-        <input required
-               type="text" 
-               id="name" 
-               placeholder="Your name, citizen.">
-        <label for="email" id="email-label">Email address:</label> 
-        <input required
-               type="email" 
-               id="email" 
-               placeholder="That's the one with the '@' symbol">
-        <label for="number" id="number-label">Phone number:</label>
-        <input type="number" 
-               id="number" 
-               min=7
-               max=10
-               placeholder="Digits only please" 
-               required>
-        <label for="gender">Gender:</label>
-        <input required
-               type="choose" 
-               id="gender"
-               placeholder="Honestly just write whatever in here">
+        <div class="fieldset-column">
+          <label for="name" id="name-label">Name:</label>
+          <input required
+                 type="text" 
+                 id="name" 
+                 placeholder="Your name, citizen.">
+          <label for="email" id="email-label">Email address:</label> 
+          <input required
+                 type="email" 
+                 id="email" 
+                 placeholder="That's the one with the '@' symbol">
+          <label for="number" id="number-label">Phone number:</label>
+          <input type="number" 
+                 id="number" 
+                 min=7
+                 max=10
+                 placeholder="Digits only please" 
+                 required>
+          <label for="dropdown">Gender:</label>
+          <select required
+                 id="dropdown">
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="transgender">Transgender</option>
+            <option value="gender-fluid">Gender-fluid</option>
+            <option value="ordinary-fluid">Ordinary fluid</option>
+            <option value="gas">Gas</option>
+          </select>
+        </div>
       </fieldset>
       
-      <fieldset>
+      <fieldset id="favourite-thing">
         <legend>What is your favourite thing about Norman Borlaug?</legend>
         <div class="multiple-radio">
-          <label for="best-borlaug-1">His courage</label>
-          <input type="radio" name="best-thing-about-borlaug" id="best-borlaug-1">
-          <label for="best-borlaug-2">Steely gaze</label>
-          <input type="radio" name="best-thing-about-borlaug" id="best-borlaug-2">
-          <label for="best-borlaug-3">Obviously the wheat. He saved billions of lives with that wheat. How can it not be the wheat? </label>
-          <input type="radio" name="best-thing-about-borlaug" id="best-borlaug-3">
+          <input type="radio" name="best-thing-about-borlaug" id="courage" value="courage">
+          <label for="courage">His courage</label>
+          <input type="radio" name="best-thing-about-borlaug" id="steely-gaze" value="steely-gaze">
+          <label for="steely-gaze">Steely gaze</label>
+          <input type="radio" name="best-thing-about-borlaug" id="wheat" value="wheat">
+          <label for="wheat">Obviously the wheat. He saved billions of lives with that wheat. How can it not be the wheat? </label>
         </div>
       </fieldset>
       
@@ -55,37 +64,37 @@
         <legend>Check any box with a personality trait you feel matches Norman Borlaug</legend>
         <div class="multiple-checkbox">
           <label for="graceful">graceful</label>
-          <input type="checkbox" id="graceful" name="personality">
+          <input type="checkbox" id="graceful" value="graceful" name="personality">
           <label for="sneaky">sneaky</label>
-          <input type="checkbox" id="sneaky" name="personality">
+          <input type="checkbox" id="sneaky" value="sneaky" name="personality">
           <label for="generous">generous</label>
-          <input type="checkbox" id="generous" name="personality">
+          <input type="checkbox" id="generous" value="generous" name="personality">
           <label for="aloof">aloof</label>
-          <input type="checkbox" id="aloof" name="personality">
+          <input type="checkbox" id="aloof" value="aloof" name="personality">
           <label for="aggressive">aggressive</label>
-          <input type="checkbox" id="aggressive" name="personality">
+          <input type="checkbox" id="aggressive" value="aggressive" name="personality">
           <label for="handsome">handsome</label>
-          <input type="checkbox" id="handsome" name="personality">
+          <input type="checkbox" id="handsome" value="handsome" name="personality">
           <label for="charismatic">charismatic</label>
-          <input type="checkbox" id="charismatic" name="personality">
+          <input type="checkbox" id="charismatic" value="charismatic" name="personality">
           <label for="depraved">depraved</label>
-          <input type="checkbox" id="depraved" name="personality">
+          <input type="checkbox" id="depraved" value="depraved" name="personality">
           <label for="rueful">rueful</label>
-          <input type="checkbox" id="rueful" name="personality">
+          <input type="checkbox" id="rueful" value="rueful" name="personality">
           <label for="titillating">titillating</label>
-          <input type="checkbox" id="titillating" name="personality">
+          <input type="checkbox" id="titillating" value="titillating" name="personality">
           <label for="stingy">stingy</label>
-          <input type="checkbox" id="stingy" name="personality">
+          <input type="checkbox" id="stingy" value="stingy" name="personality">
           <label for="gregarious">gregarious</label>
-          <input type="checkbox" id="gregarious" name="personality">
+          <input type="checkbox" id="gregarious" value="gregarious" name="personality">
           <label for="humble">humble</label>
-          <input type="checkbox" id="humble" name="personality">
+          <input type="checkbox" id="humble" value="humble" name="personality">
           <label for="dim-witted">dim-witted</label>
-          <input type="checkbox" id="dim-witted" name="personality">
+          <input type="checkbox" id="dim-witted" value="dim-witted" name="personality">
           <label for="lithe">lithe</label>
-          <input type="checkbox" id="lithe" name="personality">
+          <input type="checkbox" id="lithe" value="lithe" name="personality">
           <label for="brilliant">brilliant</label>
-          <input type="checkbox" id="brilliant" name="personality">
+          <input type="checkbox" id="brilliant" value="brilliant" name="personality">
         </div>         
       </fieldset>
       
@@ -98,8 +107,5 @@
       <button type="submit" id="submit">Submit</button>
     </form>
   </body>
-  <footer>
-    footer
-  </footer>
 </html>
 
