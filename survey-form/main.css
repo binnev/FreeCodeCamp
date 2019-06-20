@@ -1,0 +1,114 @@
+/* * {
+  border: 1px solid red;
+} */
+
+:root {
+  /* colours */
+  --light: #edf8fb;
+  --med: #99d8c9;
+  --dark: #005824;
+}
+
+html {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+header {
+  width = 100%;
+/*   background-color: teal; */
+  text-align: center;
+  color: var(--dark);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 400px; 
+  background-color: var(--med);
+}
+
+footer {
+  width: 100%;
+  background-color: var(--dark);
+  color: var(--light);
+  text-align: center;
+}
+
+fieldset {
+  border-radius: 5px;
+  border: 2px solid var(--dark);
+}
+
+.survey-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  background-color: var(--light);
+  max-width: 600px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.fieldset-column {
+  display: flex; 
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.fieldset-column label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.multiple-radio {
+  max-width: 55%;
+  display: flex;
+  flex-direction: column; 
+  align-items: right;
+}
+
+.multiple-radio label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+.multiple-checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.multiple-checkbox label {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+/*   border: 1px solid var(--med); */
+  background-color: var(--med);
+}
+
+.comments {
+  width: 100%;
+}
+
+.comments label{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.comments label textarea {
+  min-height: 100px;
+}

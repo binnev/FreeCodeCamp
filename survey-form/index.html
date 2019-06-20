@@ -1,0 +1,126 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<head>
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<html>
+  <header>
+    <h1 id="title">Title of the form</h1>
+    <p id="description">This paragraph describes the form. What is the purpose of the form? What information is required? How long will this survey take?</p>
+  </header>
+  
+  <body>
+    <form id="survey-form" class="survey-form">
+      <fieldset class="fieldset-column">
+        <legend>Enter your personal details:</legend>
+        <label for="name" id="name-label">Name:
+          <input required
+                 type="text" 
+                 id="name" 
+                 placeholder="Type your name here">
+        </label>
+        <label for="email" id="email-label">Email address: 
+          <input required
+                 type="email" 
+                 id="email" 
+                 placeholder="That's the one with the '@' symbol">
+        </label>
+        <label for="number" id="number-label">Phone number:
+          <input type="number" 
+                 id="number" 
+                 min=7
+                 max=10
+                 placeholder="Digits only please" 
+                 required>
+        </label>
+        <label for="gender">Gender:
+          <input required
+                 type="choose" 
+                 id="gender">
+        </label>
+      </fieldset>
+      
+      <fieldset>
+        <legend>What is your favourite thing about Norman Borlaug?</legend>
+        <div class="multiple-radio">
+          <label for="best-borlaug-1">His courage
+            <input type="radio" name="best-thing-about-borlaug" id="best-borlaug-1">
+          </label>
+          <label for="best-borlaug-2">Steely gaze
+            <input type="radio" name="best-thing-about-borlaug" id="best-borlaug-2">
+          </label>
+          <label for="best-borlaug-3">Obviously the wheat. He saved billions of lives with that wheat. How can it not be the wheat? 
+            <input type="radio" name="best-thing-about-borlaug" id="best-borlaug-3">
+          </label>
+        </div>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Check any box with a personality trait you feel matches Norman Borlaug</legend>
+        <div class="multiple-checkbox">
+          <label for="graceful">graceful
+            <input type="checkbox" id="graceful" name="personality">
+          </label>
+          <label for="sneaky">sneaky
+            <input type="checkbox" id="sneaky" name="personality">
+          </label>
+          <label for="generous">generous
+            <input type="checkbox" id="generous" name="personality">
+          </label>
+          <label for="aloof">aloof
+            <input type="checkbox" id="aloof" name="personality">
+          </label>
+          <label for="aggressive">aggressive
+            <input type="checkbox" id="aggressive" name="personality">
+          </label>
+          <label for="handsome">handsome
+            <input type="checkbox" id="handsome" name="personality">
+          </label>
+          <label for="charismatic">charismatic
+            <input type="checkbox" id="charismatic" name="personality">
+          </label>
+          <label for="depraved">depraved
+            <input type="checkbox" id="depraved" name="personality">
+          </label>
+          <label for="rueful">rueful
+            <input type="checkbox" id="rueful" name="personality">
+          </label>
+          <label for="titillating">titillating
+            <input type="checkbox" id="titillating" name="personality">
+          </label>
+          <label for="stingy">stingy
+            <input type="checkbox" id="stingy" name="personality">
+          </label>
+          <label for="gregarious">gregarious
+            <input type="checkbox" id="gregarious" name="personality">
+          </label>
+          <label for="humble">humble
+            <input type="checkbox" id="humble" name="personality">
+          </label>
+          <label for="dim-witted">dim-witted
+            <input type="checkbox" id="dim-witted" name="personality">
+          </label>
+          <label for="lithe">lithe
+            <input type="checkbox" id="lithe" name="personality">
+          </label>
+          <label for="brilliant">brilliant
+            <input type="checkbox" id="brilliant" name="personality">
+          </label>
+        </div>         
+      </fieldset>
+      
+      <div class="comments">
+        <label>Additional comments
+          <textarea placeholder="Additional comments"></textarea>
+        </label>
+      </div>
+      
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+  <footer>
+    footer
+  </footer>
+</html>
+
