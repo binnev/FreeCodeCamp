@@ -8,106 +8,84 @@
 
   <header>
     <h1 id="title">Title of the form</h1>
-    <p id="description">This is a survey to gauge your response to my previous site about Norman Borlaug. It will take a few minute to complete.</p>
+    <p id="description">This is a survey to gauge your response to my previous site about Norman Borlaug. It will take a few minutes to complete.</p>
   </header>
   
   <body>
     <form id="survey-form" class="survey-form">
-      <fieldset class="fieldset-column">
+      <fieldset class="fieldset-column" id="personal-details">
         <legend>Enter your personal details:</legend>
-        <label for="name" id="name-label">Name:
-          <input required
-                 type="text" 
-                 id="name" 
-                 placeholder="Type your name here">
-        </label>
-        <label for="email" id="email-label">Email address: 
-          <input required
-                 type="email" 
-                 id="email" 
-                 placeholder="That's the one with the '@' symbol">
-        </label>
-        <label for="number" id="number-label">Phone number:
-          <input type="number" 
-                 id="number" 
-                 min=7
-                 max=10
-                 placeholder="Digits only please" 
-                 required>
-        </label>
-        <label for="gender">Gender:
-          <input required
-                 type="choose" 
-                 id="gender">
-        </label>
+        <label for="name" id="name-label">Name:</label>
+        <input required
+               type="text" 
+               id="name" 
+               placeholder="Your name, citizen.">
+        <label for="email" id="email-label">Email address:</label> 
+        <input required
+               type="email" 
+               id="email" 
+               placeholder="That's the one with the '@' symbol">
+        <label for="number" id="number-label">Phone number:</label>
+        <input type="number" 
+               id="number" 
+               min=7
+               max=10
+               placeholder="Digits only please" 
+               required>
+        <label for="gender">Gender:</label>
+        <input required
+               type="choose" 
+               id="gender"
+               placeholder="Honestly just write whatever in here">
       </fieldset>
       
       <fieldset>
         <legend>What is your favourite thing about Norman Borlaug?</legend>
         <div class="multiple-radio">
-          <label for="best-borlaug-1">His courage
-            <input type="radio" name="best-thing-about-borlaug" id="best-borlaug-1">
-          </label>
-          <label for="best-borlaug-2">Steely gaze
-            <input type="radio" name="best-thing-about-borlaug" id="best-borlaug-2">
-          </label>
-          <label for="best-borlaug-3">Obviously the wheat. He saved billions of lives with that wheat. How can it not be the wheat? 
-            <input type="radio" name="best-thing-about-borlaug" id="best-borlaug-3">
-          </label>
+          <label for="best-borlaug-1">His courage</label>
+          <input type="radio" name="best-thing-about-borlaug" id="best-borlaug-1">
+          <label for="best-borlaug-2">Steely gaze</label>
+          <input type="radio" name="best-thing-about-borlaug" id="best-borlaug-2">
+          <label for="best-borlaug-3">Obviously the wheat. He saved billions of lives with that wheat. How can it not be the wheat? </label>
+          <input type="radio" name="best-thing-about-borlaug" id="best-borlaug-3">
         </div>
       </fieldset>
       
       <fieldset>
         <legend>Check any box with a personality trait you feel matches Norman Borlaug</legend>
         <div class="multiple-checkbox">
-          <label for="graceful">graceful
-            <input type="checkbox" id="graceful" name="personality">
-          </label>
-          <label for="sneaky">sneaky
-            <input type="checkbox" id="sneaky" name="personality">
-          </label>
-          <label for="generous">generous
-            <input type="checkbox" id="generous" name="personality">
-          </label>
-          <label for="aloof">aloof
-            <input type="checkbox" id="aloof" name="personality">
-          </label>
-          <label for="aggressive">aggressive
-            <input type="checkbox" id="aggressive" name="personality">
-          </label>
-          <label for="handsome">handsome
-            <input type="checkbox" id="handsome" name="personality">
-          </label>
-          <label for="charismatic">charismatic
-            <input type="checkbox" id="charismatic" name="personality">
-          </label>
-          <label for="depraved">depraved
-            <input type="checkbox" id="depraved" name="personality">
-          </label>
-          <label for="rueful">rueful
-            <input type="checkbox" id="rueful" name="personality">
-          </label>
-          <label for="titillating">titillating
-            <input type="checkbox" id="titillating" name="personality">
-          </label>
-          <label for="stingy">stingy
-            <input type="checkbox" id="stingy" name="personality">
-          </label>
-          <label for="gregarious">gregarious
-            <input type="checkbox" id="gregarious" name="personality">
-          </label>
-          <label for="humble">humble
-            <input type="checkbox" id="humble" name="personality">
-          </label>
-          <label for="dim-witted">dim-witted
-            <input type="checkbox" id="dim-witted" name="personality">
-          </label>
-          <label for="lithe">lithe
-            <input type="checkbox" id="lithe" name="personality">
-          </label>
-          <label for="brilliant">brilliant
-            <input type="checkbox" id="brilliant" name="personality">
-          </label>
+          <label for="graceful">graceful</label>
+          <input type="checkbox" id="graceful" name="personality">
+          <label for="sneaky">sneaky</label>
+          <input type="checkbox" id="sneaky" name="personality">
+          <label for="generous">generous</label>
+          <input type="checkbox" id="generous" name="personality">
+          <label for="aloof">aloof</label>
+          <input type="checkbox" id="aloof" name="personality">
+          <label for="aggressive">aggressive</label>
+          <input type="checkbox" id="aggressive" name="personality">
+          <label for="handsome">handsome</label>
+          <input type="checkbox" id="handsome" name="personality">
+          <label for="charismatic">charismatic</label>
+          <input type="checkbox" id="charismatic" name="personality">
+          <label for="depraved">depraved</label>
+          <input type="checkbox" id="depraved" name="personality">
+          <label for="rueful">rueful</label>
+          <input type="checkbox" id="rueful" name="personality">
+          <label for="titillating">titillating</label>
+          <input type="checkbox" id="titillating" name="personality">
+          <label for="stingy">stingy</label>
+          <input type="checkbox" id="stingy" name="personality">
+          <label for="gregarious">gregarious</label>
+          <input type="checkbox" id="gregarious" name="personality">
+          <label for="humble">humble</label>
+          <input type="checkbox" id="humble" name="personality">
+          <label for="dim-witted">dim-witted</label>
+          <input type="checkbox" id="dim-witted" name="personality">
+          <label for="lithe">lithe</label>
+          <input type="checkbox" id="lithe" name="personality">
+          <label for="brilliant">brilliant</label>
+          <input type="checkbox" id="brilliant" name="personality">
         </div>         
       </fieldset>
       

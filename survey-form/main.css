@@ -1,6 +1,6 @@
-/* * {
+ * {
   border: 1px solid red;
-} */
+} 
 
 :root {
   /* colours */
@@ -64,7 +64,11 @@ fieldset {
 .fieldset-column label {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: stretch;
+}
+
+#personal-details input {
+	width: 300px;
 }
 
 .multiple-radio {
