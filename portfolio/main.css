@@ -1,0 +1,175 @@
+/* * {border: 1px solid red;} */
+
+:root {
+/*   define colours here */
+  --light: #ccc;
+  --dark: #333;
+  --medium: #777;
+/*   page sizing */
+  --header-height: 60px;
+}
+
+html, body {
+  background-color: var(--dark);
+  margin: 0;
+  font-family: sans-serif;
+}
+
+html {  scroll-behavior: smooth;}
+
+main {
+  overflow: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+header {
+  height: var(--header-height);
+  z-index: 10;  
+  box-shadow: 0 0 9px black;
+  font-size: x-large;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: var(--light);
+  height: 100%;
+}
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: orange;
+}
+
+nav a:active {
+  background-color: teal;
+}
+
+.container {
+  display: grid; 
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  min-width: 350px;
+}
+
+#light{background-color:var(--light);}
+#medium{background-color:var(--medium);}
+#dark{background-color:var(--dark);}
+#white{background-color:white;}
+#black{background-color:black;color:white;}
+
+#welcome-section {
+  background-color: var(--medium);
+  height: calc(100vh - var(--header-height));
+  text-align: center;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -3;
+}
+
+#headshot {
+  height: 200px; 
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 7px 5px 10px;
+  margin: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 60pt;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
+  grid-gap: 20px;
+/*   border: 1px solid red; */
+}
+
+/* I'm using James Futhey's live website thumbnail technique from here: https://medium.com/@jamesfuthey/simulating-the-creation-of-website-thumbnail-screenshots-using-iframes-7145269891db 
+I've changed it quite a bit.  */
+.project-tile {
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--light);
+  position: relative;
+} 
+
+.thumbnail {
+  width: 100%;
+  text-align: center;
+  overflow: hidden; /*hide extra vertical space*/
+}
+
+/* This prevents the user from interacting with the website thumbnails */
+.thumbnail:after {
+  content: "";
+  display: block;
+  position: absolute; /*position relative to thumbnail-container*/
+  top: 0; /*fit right to the edges of parent*/
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.thumbnail iframe {
+  height: 800px; /*make much higher than necessary*/
+  width: 200%; /*make twice as wide as parent to get wide-format site to display*/
+  transform: scale(0.5) translate(-50%, -50%); /*scale down to fit parent*/
+  border: 0;
+  background-color: orange;
+}
+
+footer {
+  height: 60px;
+  background-color: var(--medium);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  font-size: large;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+footer a:hover {
+  background-color: orange;
+}
+
+footer a:active {
+  background-color: mix(orange, white, 10%);
+}
+
+footer a i {
+  margin-right: 10px;
+  font-size: x-large;
+}
+
+h2, p {
+  text-align: center;
+}
+
+
