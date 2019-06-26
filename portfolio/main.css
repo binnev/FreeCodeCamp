@@ -31,7 +31,6 @@ main {
 
 a {
   text-decoration: none;
-  color: var(--medium);
 }
 
 header {
@@ -54,10 +53,12 @@ nav a {
   flex-direction: column;
   justify-content: center;
   padding: 10px;
+  color: var(--light);
 }
 
 nav a:hover {
   background-color: var(--pop2);
+  color: var(--black);
 }
 
 nav a:active {
