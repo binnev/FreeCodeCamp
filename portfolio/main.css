@@ -2,17 +2,25 @@
 
 :root {
 /*   define colours here */
-  --light: #ccc;
-  --dark: #333;
-  --medium: #777;
+  --white: #feffff;
+  --light: #def2f1;
+  --medium: #3aafa9;
+  --dark: #2b7a78;
+  --black: #17252a;
+  --pop: #f18904;
+  --pop2: #ffc800;
+  --accent: #371955;
+  --accent2: #4d406d;
 /*   page sizing */
   --header-height: 60px;
 }
 
 html, body {
-  background-color: var(--dark);
+  background-color: var(--accent2);
+  color: var(--black);
   margin: 0;
-  font-family: sans-serif;
+  font-family: "raleway", sans-serif;
+  font-size: large;
 }
 
 html {  scroll-behavior: smooth;}
@@ -49,11 +57,11 @@ nav a {
 }
 
 nav a:hover {
-  background-color: orange;
+  background-color: var(--pop2);
 }
 
 nav a:active {
-  background-color: teal;
+  background-color: var(--pop);
 }
 
 .container {
@@ -62,12 +70,6 @@ nav a:active {
   height: 100vh;
   min-width: 350px;
 }
-
-#light{background-color:var(--light);}
-#medium{background-color:var(--medium);}
-#dark{background-color:var(--dark);}
-#white{background-color:white;}
-#black{background-color:black;color:white;}
 
 #welcome-section {
   background-color: var(--medium);
@@ -83,14 +85,39 @@ nav a:active {
 #headshot {
   height: 200px; 
   width: 200px;
+  border: 6px solid var(--black);
   border-radius: 50%;
-  box-shadow: 7px 5px 10px;
+  /*box-shadow: 7px 5px 10px;*/
+  box-shadow: 5px 5px 0 var(--pop2);
   margin: 20px;
 }
 
 h1 {
   margin: 0;
-  font-size: 60pt;
+  color: var(--black);
+  /*font-size: 70pt;*/
+  font-size: 25vh;
+  font-family: "Boogaloo";
+  /*font-family: "carter one";*/
+  /*font-family: "Courgette";*/
+  /*font-family: "dm serif display";*/
+  /*font-family: "fredericka the great";*/
+  /*font-family: "lobster two";*/
+  font-weight: normal;
+  text-shadow: 5px 5px 0 var(--pop2);
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+h2, p {
+  text-align: center;
+}
+
+h2 {
+  font-family: "Boogaloo", serif;
+  font-size: 40pt;
+  font-weight: normal;
+  color: var(--black);
 }
 
 .gallery {
@@ -98,7 +125,14 @@ h1 {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-content: center;
   grid-gap: 20px;
-/*   border: 1px solid red; */
+}
+
+.project-tile:hover {
+  box-shadow: 0 0 0 5px var(--pop2);
+}
+
+.project-tile:active {
+  box-shadow: 0 0 0 5px var(--pop);
 }
 
 /* I'm using James Futhey's live website thumbnail technique from here: https://medium.com/@jamesfuthey/simulating-the-creation-of-website-thumbnail-screenshots-using-iframes-7145269891db 
@@ -136,31 +170,45 @@ I've changed it quite a bit.  */
   width: 200%; /*make twice as wide as parent to get wide-format site to display*/
   transform: scale(0.5) translate(-50%, -50%); /*scale down to fit parent*/
   border: 0;
-  background-color: orange;
+  background-color: var(--medium);
 }
 
 footer {
-  height: 60px;
-  background-color: var(--medium);
+  /*height: 60px;*/
+  background-color: var(--dark);
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: stretch;
   font-size: large;
+  margin-top: 30px;
+  /*border-top: 5px solid var(--pop);*/
+  box-shadow: 0 0 10px black;
+}
+
+#heading-contact {
+  margin-bottom: -20px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 footer a {
   display: flex;
   align-items: center;
   padding: 10px;
+  color: var(--black);
 }
 
 footer a:hover {
-  background-color: orange;
+  background-color: var(--pop2);
 }
 
 footer a:active {
-  background-color: mix(orange, white, 10%);
+  background-color: var(--pop);
 }
 
 footer a i {
@@ -168,8 +216,27 @@ footer a i {
   font-size: x-large;
 }
 
-h2, p {
-  text-align: center;
+/*colour testing*/
+.colour-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  justify-content: center;
+  grid-gap: 20px;
+/*   border: 1px solid red; */
 }
 
+.gallery-item {
+  height: 100px;
+  width: 100px;
+  border: 3px solid black;
+}
 
+#light{background-color:var(--light);}
+#medium{background-color:var(--medium);}
+#dark{background-color:var(--dark);}
+#white{background-color:var(--white);}
+#black{background-color:var(--black);color:white;}
+#pop{background-color:var(--pop);}
+#pop2{background-color:var(--pop2);}
+#accent{background-color:var(--accent);}
+#accent2{background-color:var(--accent2);}
