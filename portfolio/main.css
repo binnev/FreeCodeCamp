@@ -146,6 +146,7 @@ I've changed it quite a bit.  */
   background-color: var(--black);
   color: var(--white);
   position: relative;
+  border: 3px solid var(--black);
 }
 
 .project-tile p {
