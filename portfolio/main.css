@@ -35,9 +35,12 @@ a {
 
 header {
   height: var(--header-height);
+  width: 100%;
+  position: fixed;
   z-index: 10;  
   box-shadow: 0 0 9px black;
   font-size: x-large;
+/*   opacity: .5; */
 }
 
 nav {
@@ -66,30 +69,28 @@ nav a:active {
 }
 
 .container {
-  display: grid; 
-  grid-template-rows: auto 1fr;
-  height: 100vh;
+/*   the following code uses CSS grid to create a fixed header. It works perfectly with the internal links, and is in my opinion better than the FCC-approved way of doing fixed headers. But it doesn't pass the test, so hey ho.  */
+/*   display: grid;  */
+/*   grid-template-rows: auto 1fr; */
+/*   height: 100vh; */
   min-width: 350px;
 }
 
 #welcome-section {
   background-color: var(--medium);
-  height: calc(100vh - var(--header-height));
-/*   min-height: 400px; */
+  height: 100vh;
   text-align: center;
   display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: -3;
 }
 
 #headshot {
   border: 6px solid var(--black);
   border-radius: 50%;
-  /*box-shadow: 7px 5px 10px;*/
   box-shadow: 5px 5px 0 var(--pop2);
-  margin-top: 20px;
+  margin-top: var(--header-height);
   background-image: url("https://avatars3.githubusercontent.com/u/22984539?s=460&v=4");
   background-size: contain;
   background-color: var(--black);
@@ -190,6 +191,10 @@ I've changed it quite a bit.  */
   background-color: var(--white);
 }
 
+.thumbnail img {
+  width: 100%;
+}
+
 footer {
   /*height: 60px;*/
   background-color: var(--dark);
@@ -200,6 +205,10 @@ footer {
   margin-top: 30px;
   /*border-top: 5px solid var(--pop);*/
   box-shadow: 0 0 9px black;
+}
+
+#heading-projects {
+  padding-top: var(--header-height);
 }
 
 #heading-contact {
